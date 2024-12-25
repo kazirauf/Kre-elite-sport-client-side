@@ -9,7 +9,7 @@ const WhyUs = () => {
         <h2 className="text-blue-500 font-script text-3xl mb-4">our benefits</h2>
         <h1 className="text-black text-5xl font-extrabold">WHY <span className='text-blue-500'>CHOOSE </span> US</h1>
         <p className="text-gray-600 mt-6 max-w-3xl mx-auto">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore menim ad minim veniam, quis nostru.
+        KRE Elite Sport offers a seamless platform for browsing, booking, and managing sports facilities with ease. Enjoy a user-friendly interface, secure payments, and intuitive dashboards for a hassle-free experience.
         </p>
       </div>
 
