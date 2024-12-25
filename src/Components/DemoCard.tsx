@@ -22,12 +22,12 @@ const DemoCard: React.FC = () => {
   }
 
   // Take the first three facilities for display
-  const homepageFacilities: Facility[] = facilities?.data?.slice(0, 3) || [];
+  const homepageFacilities: Facility[] = facilities?.data?.slice(0, 6) || [];
 
   return (
     <div>
       <h1 className="text-center text-4xl font-bold mt-20">
-        How <span className="text-blue-500">Facilities</span>
+       Our <span className="text-blue-500">Facilities</span>
       </h1>
       
       <div className="mx-auto grid max-w-screen-xl grid-cols-1 gap-6 p-6 md:grid-cols-2 lg:grid-cols-3">
@@ -62,7 +62,15 @@ const DemoCard: React.FC = () => {
                 </div>
               </div>
             ))}
+           
           </div>
+          <Link
+             className="flex justify-center mt-10"
+                        to={"/facilities"}
+                       
+                      >  <button className="mt-5 text-white flex justify-center items-center gap-3 font-bold   bg-black px-7 py-3 rounded hover:bg-white hover:border-2 hover:border-black hover:text-black">
+                    See More
+                       </button></Link>
     </div>
   );
 };
