@@ -64,13 +64,15 @@ const DemoCard: React.FC = () => {
             ))}
            
           </div>
-          <Link
-             className="flex justify-center mt-10"
+      <div className="flex justify-center ">
+      <Link
+             className="mt-10 w-40"
                         to={"/facilities"}
                        
                       >  <button className="mt-5 text-white flex justify-center items-center gap-3 font-bold   bg-black px-7 py-3 rounded hover:bg-white hover:border-2 hover:border-black hover:text-black">
-                    See More 
+                    See More
                        </button></Link>
+      </div>
     </div>
   );
 };
