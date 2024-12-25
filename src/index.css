@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 .active {
   font-size: 18px;
   text-decoration: underline;

@@ -7,7 +7,7 @@ import Testimonials from "../Components/Testimonials";
 
 const Home = () => {
   return (
-    <div className="bg-[#F5EDED]">
+    <div className="bg-white">
       <Hero />
       <FeaturedFacilities />
       <DemoCard></DemoCard>
