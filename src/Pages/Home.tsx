@@ -5,6 +5,7 @@ import Hero from "../Components/Hero";
 import HowItWorks from "../Components/HowItWorks";
 import SumerCamp from "../Components/SumerCamp";
 import Testimonials from "../Components/Testimonials";
+import WhyUs from "../Components/WhyUs";
 
 const Home = () => {
   return (
@@ -14,6 +15,7 @@ const Home = () => {
       <SumerCamp/>
       <DemoCard></DemoCard>
       <HowItWorks />
+      <WhyUs/>
       <Testimonials />
       <FAQ></FAQ>
     </div>

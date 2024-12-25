@@ -1,7 +1,7 @@
 const FeaturedFacilities = () => {
   return (
   <div className="bg-white">
-  <h1 className="text-center text-4xl font-bold">Our <span className="text-blue-500">Featured</span> Facilities</h1>
+  <h1 className="text-center text-5xl font-bold">Our <span className="text-blue-500">Featured</span> Facilities</h1>
     <section className="flex justify-center mt-10">
       <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-10">
       <div className="card bg-base-100 w-96 shadow-xl border-x-2 border-y-4 border-black">

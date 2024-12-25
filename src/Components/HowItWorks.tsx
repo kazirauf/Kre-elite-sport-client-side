@@ -1,7 +1,7 @@
 const HowItWorks = () => {
   return (
     <div className="bg-white">
-  <h1 className="text-center text-4xl font-bold mt-20">How It <span className="text-blue-500">Works</span></h1>
+  <h1 className="text-center text-5xl font-bold mt-20">How It <span className="text-blue-500">Works</span></h1>
     <div className="hero  mt-10">
   <div className="hero-content flex-col lg:flex-row ">
     <img

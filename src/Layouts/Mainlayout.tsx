@@ -6,7 +6,7 @@ import ScrollToTopButton from "../Utils/ScrollToTopButton";
 
 const Mainlayout = () => {
   return (
-    <div>
+    <div className="bg-white">
       <ScrollToTop />
 
       <Navbar />
