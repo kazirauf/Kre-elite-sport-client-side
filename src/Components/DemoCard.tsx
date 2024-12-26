@@ -30,7 +30,7 @@ const DemoCard: React.FC = () => {
        Our <span className="text-blue-500">Facilities</span>
       </h1>
       
-      <div className="mx-auto grid max-w-screen-xl grid-cols-1 gap-6 p-6 md:grid-cols-2 lg:grid-cols-3">
+      <div className="mx-auto grid max-w-screen-2xl grid-cols-1 gap-6 p-6 md:grid-cols-2 lg:grid-cols-3">
       {homepageFacilities.map((facility, index) => (
               <div
                 key={index}
