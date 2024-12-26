@@ -6,7 +6,7 @@ const AboutUs = () => {
     <section>
       {/* about */}
       <div>
-      <div className="hero bg-base-200 my-20">
+      <div className="hero my-20">
   <div className="hero-content flex-col lg:flex-row-reverse gap-20">
     <img
       src="https://images.pexels.com/photos/5384618/pexels-photo-5384618.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
