@@ -31,40 +31,38 @@ const ContactUs = () => {
       {/* Contact Information */}
       <div className="space-y-8">
         <div>
-          <div className="flex items-center gap-2 text-gray-600 mb-6">
-            <span>01</span>
-            <span className="h-px w-12 bg-gray-300"></span>
-            <span>Contact Us</span>
+          <div className="flex items-center gap-2 text-blue-500 mb-6">
+         
           </div>
-          <h2 className="text-4xl font-bold mb-2">Ready to Travel Us</h2>
-          <p className="text-2xl text-gray-600">for Better Adventure</p>
+          <h2 className="text-4xl font-bold mb-2">Ready to Contact Us</h2>
+          <p className="text-2xl text-blue-500">for Better Suggestion</p>
         </div>
 
         <div className="space-y-6">
           <div className="flex items-start gap-4">
-            <MapPin className="w-6 h-6 text-gray-600 mt-1" />
+            <MapPin className="w-6 h-6 text-blue-500 mt-1" />
             <div>
               <h3 className="font-semibold mb-2">Location</h3>
-              <p className="text-gray-600">532 Main Street, 2nd Block</p>
-              <p className="text-gray-600">melbourne, Australia</p>
+              <p className="text-blue-500">532 Main Street, 2nd Block</p>
+              <p className="text-blue-500">melbourne, Australia</p>
             </div>
           </div>
 
           <div className="flex items-start gap-4">
-            <BsMailbox className="w-6 h-6 text-gray-600 mt-1" />
+            <BsMailbox className="w-6 h-6 text-blue-500 mt-1" />
             <div>
               <h3 className="font-semibold mb-2">Email Us</h3>
-              <p className="text-gray-600">support@gmail.com</p>
-              <p className="text-gray-600">info@dhak.net</p>
+              <p className="text-blue-500">support@gmail.com</p>
+              <p className="text-blue-500">info@dhak.net</p>
             </div>
           </div>
 
           <div className="flex items-start gap-4">
-            <FaPhone className="w-6 h-6 text-gray-600 mt-1" />
+            <FaPhone className="w-6 h-6 text-blue-500 mt-1" />
             <div>
               <h3 className="font-semibold mb-2">Hotline</h3>
-              <p className="text-gray-600">+000 (123) 456 88</p>
-              <p className="text-gray-600">+123456789</p>
+              <p className="text-blue-500">+000 (123) 456 88</p>
+              <p className="text-blue-500">+123456789</p>
             </div>
           </div>
 
@@ -72,16 +70,16 @@ const ContactUs = () => {
             <h3 className="font-semibold mb-4">Follow Us</h3>
             <div className="flex gap-4">
               <a href="#" className="p-2 bg-gray-100 rounded-full hover:bg-gray-200">
-                <FaFacebook className="w-5 h-5 text-gray-600" />
+                <FaFacebook className="w-5 h-5 text-blue-500" />
               </a>
               <a href="#" className="p-2 bg-gray-100 rounded-full hover:bg-gray-200">
-                <FaTwitter className="w-5 h-5 text-gray-600" />
+                <FaTwitter className="w-5 h-5 text-blue-500" />
               </a>
               <a href="#" className="p-2 bg-gray-100 rounded-full hover:bg-gray-200">
-                <FaInstagram className="w-5 h-5 text-gray-600" />
+                <FaInstagram className="w-5 h-5 text-blue-500" />
               </a>
               <a href="#" className="p-2 bg-gray-100 rounded-full hover:bg-gray-200">
-                <FaLinkedin className="w-5 h-5 text-gray-600" />
+                <FaLinkedin className="w-5 h-5 text-blue-500" />
               </a>
             </div>
           </div>
@@ -91,7 +89,7 @@ const ContactUs = () => {
       {/* Contact Form */}
       <div className="bg-white p-8 rounded-lg shadow-lg">
         <h2 className="text-2xl font-bold mb-2">Send Us Message</h2>
-        <p className="text-gray-600 mb-6">
+        <p className="text-blue-500 mb-6">
           Adipiscing magna verus imperdiet scelerisque suspendisse amet sed ridiculus turpis
         </p>
         <form className="space-y-6">
