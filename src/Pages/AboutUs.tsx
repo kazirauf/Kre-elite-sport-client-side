@@ -25,7 +25,7 @@ const AboutUs = () => {
   </div>
 </div>
 {/* why  */}
-      <div className="hero bg-base-200 my-20">
+      <div className="hero  my-20">
   <div className="hero-content flex-col lg:flex-row gap-20">
     <img
       src="https://t4.ftcdn.net/jpg/01/41/52/31/360_F_141523101_8umyxdkpKIqFgVImRhcWNwH9Gg5TBu29.jpg"
