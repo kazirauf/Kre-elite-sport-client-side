@@ -163,7 +163,7 @@ const FacilityManagement = () => {
         {currentData?.map((item: any, index: number) => (
       <div
       key={index}
-      className="rounded-xl w-[350px] bg-[#FCF8F3] p-3 shadow-2xl hover:shadow-xl"
+      className="rounded-xl w-[350px]  p-3 shadow-2xl hover:shadow-xl"
     >
       <div className="relative flex items-end overflow-hidden rounded-xl">
         <img

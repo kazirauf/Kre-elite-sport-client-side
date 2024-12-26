@@ -17,6 +17,7 @@ export interface Facility {
   _id: string;
   name: string;
   description: string;
+  condition: string;
   image: string;
   isDeleted: boolean;
   location: string;
