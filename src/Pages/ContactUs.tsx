@@ -97,23 +97,23 @@ const ContactUs = () => {
             <input
               type="text"
               placeholder="Full Name"
-              className="w-full p-3 border rounded-lg"
+              className="w-96 p-3 border rounded-lg"
             />
           </div>
           <div>
             <input
               type="email"
               placeholder="Email Address"
-              className="w-full p-3 border rounded-lg"
+              className="w-96 p-3 border rounded-lg"
             />
           </div>
           <div>
             <textarea
               placeholder="Write Message"
-              className="w-full p-3 border rounded-lg min-h-[150px]"
+              className="w-96 p-3 border rounded-lg min-h-[150px]"
             />
           </div>
-          <button className="w-full bg-green-500 hover:bg-green-600 text-white py-3 rounded-lg">
+          <button className="w-96 bg-blue-500 hover:bg-blue-600 text-white py-3 rounded-lg">
             SEND MESSAGE
           </button>
         </form>
