@@ -3,7 +3,7 @@ import { ShoppingBasketIcon as Basketball, Mountain, Plane } from 'lucide-react'
 const WhyUs = () => {
     return (
         <div>
-              <section className="max-w-6xl mx-auto px-4 py-12">
+              <section className="max-w-7xl mx-auto px-4 py-12">
       {/* Header Section */}
       <div className="text-center mb-12">
         <h2 className="text-blue-500 font-script text-3xl mb-4">our benefits</h2>
