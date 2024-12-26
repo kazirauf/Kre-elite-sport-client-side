@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import React, { useState, useEffect } from 'react';
-import SumerCamp from "./SumerCamp";
+import  { useState, useEffect } from 'react';
+
 const Hero = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 

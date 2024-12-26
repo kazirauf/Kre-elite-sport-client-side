@@ -1,6 +1,8 @@
 import DemoCard from "../Components/DemoCard";
 import FAQ from "../Components/FAQ";
 import FeaturedFacilities from "../Components/FeaturedFacilities";
+import Gallery from "../Components/Gallery";
+
 import Hero from "../Components/Hero";
 import HowItWorks from "../Components/HowItWorks";
 import SumerCamp from "../Components/SumerCamp";
@@ -18,6 +20,7 @@ const Home = () => {
       <WhyUs/>
       <Testimonials />
       <FAQ></FAQ>
+      <Gallery/>
     </div>
   );
 };
