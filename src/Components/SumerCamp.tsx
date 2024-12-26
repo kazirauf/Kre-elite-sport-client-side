@@ -32,7 +32,7 @@ const SumerCamp = () => {
         return () => clearInterval(timer);
       }, []);
     return (
-        <div className="flex justify-center my-20 mx-28">
+        <div className="lg:flex md:flex hidden justify-center my-20 mx-28">
           <div 
       className="h-[300px] w-full relative flex items-center justify-center bg-cover bg-center "
       style={{

@@ -74,7 +74,7 @@ const Facilities = () => {
     <div>
     <h1 className="text-center text-4xl font-bold mt-20">Our <span className="text-blue-500">Facilities</span></h1>
 
-      <div className="bg-[#F5EDED]">
+      <div className="">
         <div className="py-20">
           <div className="max-w-screen-xl mx-auto mb-7 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10">
             <select

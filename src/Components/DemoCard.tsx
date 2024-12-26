@@ -26,7 +26,7 @@ const DemoCard: React.FC = () => {
 
   return (
     <div>
-      <h1 className="text-center text-5xl font-bold mt-20">
+      <h1 className="text-center lg:text-5xl md:text-5xl text-4xl font-bold mt-20">
        Our <span className="text-blue-500">Facilities</span>
       </h1>
       

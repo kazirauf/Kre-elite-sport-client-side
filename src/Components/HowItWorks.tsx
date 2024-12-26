@@ -1,13 +1,13 @@
 const HowItWorks = () => {
   return (
     <div className="bg-white">
-  <h1 className="text-center text-5xl font-bold mt-20">How It <span className="text-blue-500">Works</span></h1>
+  <h1 className="text-center lg:text-5xl md:text-5xl text-4xl font-bold mt-20">How It <span className="text-blue-500">Works</span></h1>
     <div className="hero  mt-10">
   <div className="hero-content flex-col lg:flex-row ">
     <img
       src="https://images.pexels.com/photos/7307483/pexels-photo-7307483.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
       className="lg:max-w-xl max-w-sm  rounded-lg shadow-2xl" />
-    <div className="ml-12">
+    <div className="lg:ml-12 md:ml-12 lg:max-w-2xl  md:max-w-2xl max-w-xs mt-5">
       <div className="mb-3">
         <h3 className="text-xl font-bold mb-2">1. Explore Facilities 🔍</h3>
         <p className="text-gray-500">

@@ -42,7 +42,7 @@ const Login = () => {
 
   // Handlers to set demo credentials
   const setDemoUser = () => {
-    setEmail("user12@gmail.com");
+    setEmail("jack@gmail.com");
     setPassword("123");
   };
 
@@ -71,7 +71,7 @@ const Login = () => {
                 >
                   <h1 className="text-xl font-bold mb-3">User</h1>
                   <div className="text-start">
-                    <p className="text-base">Email: user12@gmail.com</p>
+                    <p className="text-base">Email: jack@gmail.com</p>
                     <p className="text-base">Pass: 123</p>
                   </div>
                 </button>

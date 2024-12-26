@@ -92,7 +92,7 @@ const Sidebar = () => {
                 >
                   <div className="flex p-3 items-center gap-2 font-bold">
                   <img className="w-7" src={icon2} alt="" />
-                    Facilities
+                  Manage Facilities
                   </div>
                 </NavLink>
               )}

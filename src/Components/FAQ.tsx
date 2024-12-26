@@ -2,9 +2,10 @@ import '../index.css'
 
 const FAQ = () => {
     return (
-     <section className='bg-white'>
+    <div className='lg:flex md:flex hidden'>
+       <section className='bg-white'>
          <h1 className="text-center text-5xl font-bold mt-20">F<span className="text-blue-500">A</span>Q</h1>
-           <div className='flex justify-center items-center mx-auto my-20'>
+           <div className='lg:flex md:flex hidden justify-center items-center mx-auto my-20'>
             <div className="box">
    <p className="heading text-lg font-bold">Sample FAQ Questions</p>
    <div className="faqs">
@@ -41,6 +42,7 @@ const FAQ = () => {
 
         </div>
      </section>
+    </div>
     );
 };
 

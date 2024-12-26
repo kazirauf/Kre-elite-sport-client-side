@@ -4,7 +4,7 @@ const Gallery = () => {
     return (
         <div>
             <section className=" pb-20">
-<h1 className="text-center text-5xl font-bold mt-20">Our <span className="text-blue-500">Gallery</span></h1>
+<h1 className="text-center lg:text-5xl md:text-5xl text-4xl font-bold mt-20">Our <span className="text-blue-500">Gallery</span></h1>
 
   <div className="flex justify-center my-10">
   <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-10">

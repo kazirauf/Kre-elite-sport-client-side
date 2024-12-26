@@ -1,10 +1,10 @@
 const FeaturedFacilities = () => {
   return (
   <div className="bg-white">
-  <h1 className="text-center text-5xl font-bold">Our <span className="text-blue-500">Featured</span> Facilities</h1>
+  <h1 className="text-center lg:text-5xl md:text-5xl text-4xl font-bold">Our <span className="text-blue-500">Featured</span> Facilities</h1>
     <section className="flex justify-center mt-10">
       <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-10">
-      <div className="card bg-base-100 w-96 shadow-xl border-x-2 border-y-4 border-black">
+      <div className="card bg-base-100 lg:w-96 md:w-96 w-80 shadow-xl border-x-2 border-y-4 border-black">
   <figure>
     <img
       src="https://images.pexels.com/photos/3651674/pexels-photo-3651674.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
@@ -18,7 +18,7 @@ const FeaturedFacilities = () => {
     </div>
   </div>
 </div>
-      <div className="card bg-base-100 w-96 shadow-xl border-x-2 border-y-4 border-black">
+      <div className="card bg-base-100 lg:w-96 md:w-96 w-80 shadow-xl border-x-2 border-y-4 border-black">
   <figure>
     <img
       src="https://images.pexels.com/photos/6150626/pexels-photo-6150626.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
@@ -32,7 +32,7 @@ const FeaturedFacilities = () => {
     </div>
   </div>
 </div>
-      <div className="card bg-base-100 w-96 shadow-xl border-x-2 border-y-4 border-black">
+      <div className="card bg-base-100 lg:w-96 md:w-96 w-80 shadow-xl border-x-2 border-y-4 border-black">
   <figure>
     <img
       src="https://images.pexels.com/photos/27625147/pexels-photo-27625147/free-photo-of-swimmers-in-a-pool-with-a-yellow-background.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
