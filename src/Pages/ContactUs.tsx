@@ -27,18 +27,19 @@ const ContactUs = () => {
     </div>
 
     {/* Main Content */}
-    <div className="max-w-7xl mx-auto px-4 py-16 grid md:grid-cols-2 gap-12">
+   <div className='flex justify-around'>
+   <div className=" max-w-7xl mx-auto px-4 py-16 grid md:grid-cols-2 lg:gap-20 gap-12 mx-5">
       {/* Contact Information */}
-      <div className="space-y-8">
+      <div className="lg:space-y-8 md:space-y-6 lg:ml-0 ml-5">
         <div>
           <div className="flex items-center gap-2 text-blue-500 mb-6">
          
           </div>
-          <h2 className="text-4xl font-bold mb-2">Ready to Contact Us</h2>
-          <p className="text-2xl text-blue-500">for Better Suggestion</p>
+          <h2 className="lg:text-4xl md:text-3xl text-2xl font-bold mb-2">Ready to Contact Us</h2>
+          <p className="lg:text-2xl md:text-xl text-lg text-blue-500">for Better Suggestion</p>
         </div>
 
-        <div className="space-y-6">
+        <div className="lg:space-y-6 md:space-y-6">
           <div className="flex items-start gap-4">
             <MapPin className="w-6 h-6 text-blue-500 mt-1" />
             <div>
@@ -87,7 +88,7 @@ const ContactUs = () => {
       </div>
 
       {/* Contact Form */}
-      <div className="bg-white p-8 rounded-lg shadow-lg">
+      <div className="bg-white p-8 lg:max-w-[440px] md:max-w-[400px] max-w-[340px] rounded-lg shadow-lg">
         <h2 className="text-2xl font-bold mb-2">Send Us Message</h2>
         <p className="text-blue-500 mb-6">
           Adipiscing magna verus imperdiet scelerisque suspendisse amet sed ridiculus turpis
@@ -97,28 +98,29 @@ const ContactUs = () => {
             <input
               type="text"
               placeholder="Full Name"
-              className="w-96 p-3 border rounded-lg"
+              className="lg:w-96 md:w-96 w-64 p-3 border rounded-lg"
             />
           </div>
           <div>
             <input
               type="email"
               placeholder="Email Address"
-              className="w-96 p-3 border rounded-lg"
+              className="lg:w-96 md:w-96 w-64 p-3 border rounded-lg"
             />
           </div>
           <div>
             <textarea
               placeholder="Write Message"
-              className="w-96 p-3 border rounded-lg min-h-[150px]"
+              className="lg:w-96 md:w-96 w-64 p-3 border rounded-lg min-h-[150px]"
             />
           </div>
-          <button className="w-96 bg-blue-500 hover:bg-blue-600 text-white py-3 rounded-lg">
+          <button className="lg:w-96 md:w-96 w-64 bg-blue-500 hover:bg-blue-600 text-white py-3 rounded-lg">
             SEND MESSAGE
           </button>
         </form>
       </div>
     </div>
+   </div>
   </div>
 
   );
