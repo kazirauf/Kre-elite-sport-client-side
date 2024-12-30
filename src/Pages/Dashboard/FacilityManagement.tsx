@@ -159,67 +159,50 @@ const FacilityManagement = () => {
       </div>
          
       <h1 className="text-center text-4xl font-bold">Manage Your All <span className="text-blue-500">Facilities</span> </h1>
-      <div className="mt-7 flex justify-center flex-wrap gap-10">
-        {currentData?.map((item: any, index: number) => (
-      <div
-      key={index}
-      className="rounded-xl w-[350px]  p-3 shadow-2xl hover:shadow-xl"
-    >
-      <div className="relative flex items-end overflow-hidden rounded-xl">
-        <img
-          src={item.image}
-          alt="Facility Photo"
-          className="h-[220px] w-full"
-        />
-      </div>
-
-      <div className="mt-1 p-2">
-        <h2 className="text-black-800 text-center text-xl font-bold">
-          {item.name}
-        </h2>
-
-        <span className="text-lg flex justify-center items-center  text-black-800 text-center">
-          <span className="font-bold text-blue-500 mr-1 text-2xl mt-4">${item.pricePerHour} </span> Per Hour
-        </span>
-
-        <Link
-          className="mt-5 mb-3 text-white flex justify-center items-center gap-3 font-bold  bg-black p-2 hover:bg-white hover:border-2 hover:border-black hover:text-black"
-          to={`/facilities/${item._id}`}
-        >
-          View Details
-        </Link>
-        <div className="flex justify-around">
-        <Button
-                
-                onClick={() => handleOpen(item)}
-                size="sm"
-                className="capitalize bg-transparent"
-                placeholder={undefined}
-                onPointerEnterCapture={undefined}
-                onPointerLeaveCapture={undefined}
-              >
-                <img className="w-12" src="https://raw.githubusercontent.com/kazirauf/pure-planet-client/main/src/assets/icons8-edit.gif" alt="" />
-               <h2 className="text-base text-lime-600">Update</h2>
-              </Button>
-              <Button
-               onClick={() => handleDeleteFacility(item._id)}
-                size="sm"
-                className=" bg-transparent"
-                placeholder={undefined}
-                onPointerEnterCapture={undefined}
-                onPointerLeaveCapture={undefined}
-              >
-            <img className="w-16" src="https://raw.githubusercontent.com/kazirauf/pure-planet-client/main/src/assets/Animation%20-%201720876273691.gif" alt="" />
-            <h2 className="text-red-600 text-base">Delete</h2>
-              </Button>
-        </div>
-     
-      </div>
+      <div className=" mx-auto px-4 sm:px-6 lg:px-8 mt-10">
+      <table className="min-w-full divide-y divide-gray-200">
+        <thead className="bg-gray-50">
+          <tr>
+            <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Image</th>
+            <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Name</th>
+            <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Price Per Hour</th>
+            <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Actions</th>
+          </tr>
+        </thead>
+        <tbody className="bg-white divide-y divide-gray-200">
+          {currentData?.slice(0, 5).map((item: any, index: number) => (
+            <tr key={index}>
+              <td className="px-6 py-4 whitespace-nowrap">
+                <img src={item.image} alt="Facility Photo" className="h-20 w-20 rounded-full" />
+              </td>
+              <td className="px-6 py-4 whitespace-nowrap">
+                <div className="text-sm font-medium text-gray-900">{item.name}</div>
+              </td>
+              <td className="px-6 py-4 whitespace-nowrap">
+                <div className="text-sm text-gray-900">${item.pricePerHour} Per Hour</div>
+              </td>
+              <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
+               
+                <button
+                  onClick={() => handleOpen(item)}
+              
+                  className="text-lime-600 bg-transparent hover:bg-lime-100 mr-2"
+                >
+                  Update
+                </button>
+                <button
+                  onClick={() => handleDeleteFacility(item._id)}
+               
+                  className="text-red-600 bg-transparent hover:bg-red-100"
+                >
+                  Delete
+                </button>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </div>
-      
-    
-        ))}
-      </div>
 
       <div className={`flex justify-center mt-14 mb-8`}>
         <button
