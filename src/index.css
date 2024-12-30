@@ -12,7 +12,7 @@
 .swiper-button-prev::after,
 .swiper-button-next::after {
   color: white !important;
-  background-color: rgb(231, 236, 240);
+ 
   padding: 10px;
   border-radius: 10px;
   font-size: 30px !important;
@@ -290,7 +290,7 @@ details summary{
 
 
 body {
-  background-color: #fdf1ec;
+  background-color: white;
 }
 
 .wrapper {

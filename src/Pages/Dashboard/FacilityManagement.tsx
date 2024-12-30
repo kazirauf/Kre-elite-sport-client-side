@@ -142,24 +142,21 @@ const FacilityManagement = () => {
   }
 
   return (
-    <div>
+    <div className="">
     
 
-      <div className="flex justify-center items-center my-5">
-        <Button
-          onClick={handleCreateFacilityModalOpen}
-           className="w-full text-xl p-3 bg-black text-white rounded-md hover:bg-white hover:text-black hover:border-2 hover:border-black transition duration-200"
-          placeholder={undefined}
-          onPointerEnterCapture={undefined}
-          onPointerLeaveCapture={undefined}
-        >
-          <IoMdAddCircle size={20} />
-          <span>Create A New Facility</span>
-        </Button>
+      <div className="flex lg:justify-end md:justify-end mb-10 justify-center items-center my-5">
+    
+
+        <button className="mt-5 text-white flex justify-center items-center gap-3 font-bold  bg-black p-4 hover:bg-white hover:border-2 hover:border-black hover:text-black mr-10 rounded-lg"
+         onClick={handleCreateFacilityModalOpen}>
+      
+      +   Create Facility 
+        </button>
       </div>
          
-      <h1 className="text-center text-4xl font-bold">Manage Your All <span className="text-blue-500">Facilities</span> </h1>
-      <div className=" mx-auto px-4 sm:px-6 lg:px-8 mt-10">
+      <h1 className="text-center lg:text-4xl md:text-4xl text-2xl font-bold">Manage Your All <span className="text-blue-500">Facilities</span> </h1>
+      <div className=" mx-auto  sm:px-6 lg:px-8 mt-10">
       <table className="min-w-full divide-y divide-gray-200">
         <thead className="bg-gray-50">
           <tr>
