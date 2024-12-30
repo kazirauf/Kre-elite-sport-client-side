@@ -55,25 +55,27 @@ const Overview: React.FC = () => {
       </div>
       :
       <div>
-         <h1 className="text-center text-black text-5xl font-bold mt-20">
-        Welcome <span className="text-blue-500 font-bold">{user?.name}</span> to your Dashboard
-      </h1>
-      <div className="flex flex-wrap justify-center items-center gap-5 my-10">
-        <div className="bg-blue-500 text-white py-5 text-center w-1/4 rounded">
+     
+  <div className=''>
+  <div className="lg:flex md:flex flex-wrap justify-center items-center gap-10 my-10 mt-20">
+        <div className="bg-blue-500 text-white py-5 text-center lg:w-1/4 md:w-1/4 w-10/12 mb-3 rounded">
           <h1 className="text-5xl font-bold mb-2">{bookings.data.length}</h1>
           <h4 className="text-xl">Total Bookings</h4>
         </div>
-        <div className="bg-blue-500 text-white text-center py-5 w-1/4 rounded">
+        <div className="bg-blue-500 text-white text-center py-5 lg:w-1/4 md:w-1/4 w-10/12  mb-3 rounded">
           <h1 className="text-5xl font-bold mb-2">{facilities?.data?.length || 0}</h1>
           <h4 className="text-xl">Total Facilities</h4>
         </div>
-        <div className="bg-blue-500 text-white py-5 text-center w-1/4 rounded">
+        <div className="bg-blue-500 text-white py-5 text-center lg:w-1/4 md:w-1/4 w-10/12  rounded">
           <h1 className="text-5xl font-bold mb-2">19</h1>
           <h4 className="text-xl">Total Users</h4>
         </div>
       </div>
-
-      <div className="flex justify-center my-10">
+  </div>
+    
+     <div className='lg:flex md:flex justify-center mt-20'>
+      
+     <div className="flex justify-center my-10">
         <BarChart
           xAxis={[{ id: 'categories', data: chartData.map(item => item.category), scaleType: 'band' }]}
           series={[{ data: chartData.map(item => item.value) }]}
@@ -122,6 +124,7 @@ const Overview: React.FC = () => {
           </table>
         </div>
       </div>
+     </div>
       </div>
 }
      
