@@ -6,7 +6,7 @@ import {
 } from "../../Redux/Features/Bookings/bookings.api";
 import NoDataFound from "../../Utils/NoDataFound";
 import LoaderForDashboard from "./LoaderForDashboard";
-import { Dialog,} from "@material-tailwind/react";
+import { Dialog } from "@material-tailwind/react";
 import { formatDate } from "../../Utils/formatDate";
 import { convertTo12HourFormat } from "../../Utils/timeConversion";
 import toast from "react-hot-toast";
@@ -16,10 +16,7 @@ import { FacilityDetails } from "../../Types/Types";
 
 const MyBookings = () => {
   const { data: bookings, isLoading } = useGetBookingsByUserQuery(undefined);
-  console.log(bookings);
-
   const [cancelBooking] = useCancelBookingMutation();
-
   const [open, setOpen] = useState(false);
   const [details, setDetails] = useState<FacilityDetails | null>(null);
 
@@ -64,96 +61,97 @@ const MyBookings = () => {
 
   return (
     <div>
-       <h1 className="text-center text-4xl text-black font-bold my-10">My <span className="text-blue-500 text-4xl font-bold"> Booking</span> </h1>
+      <h1 className="text-center text-4xl text-black font-bold my-10">
+        My <span className="text-blue-500 text-4xl font-bold">Bookings</span>
+      </h1>
 
-      <div className="mt-7 flex flex-wrap justify-center gap-5">
-        {bookings?.data?.map((item: any, index: number) => (
-     
-          <div
-            key={index}
-            className="rounded-xl p-3 shadow-2xl hover:shadow-xl border-2 "
-          >
-            <div className="relative flex items-end overflow-hidden rounded-xl">
-              <img
-                src={item.facility.image}
-                alt="Hotel Photo"
-                className="h-[200px] w-full"
-              />
-            </div>
-
-            <div className="mt-1 p-2">
-              <h2 className="text-black text-center text-xl font-bold">
-                {item.facility.name}
-              </h2>
-
-              <span className="text-lg flex justify-center items-center mt-4 font-bold text-black text-center">
-                $ {item.facility.pricePerHour} per hour
-              </span>
-            </div>
-
-            <div className="flex justify-center items-center gap-5 mt-3">
-              <button
-                onClick={() => handleOpen(item)}
-                className="inline-block flex-1  bg-black p-2 text-center text-sm font-semibold text-white outline-none transition duration-100 hover:bg-white hover:border-black hover:text-white sm:flex-none md:text-base"
-              >
-                Details
-              </button>
-
-              <button
-                onClick={() => handleCancelBooking(item?._id)}
-                className="inline-block flex-1  bg-red-500 p-2 text-center text-sm font-semibold text-white outline-none transition duration-100 hover:bg-white hover:border-red-500 hover:text-red-500 sm:flex-none md:text-base"
-              >
-                Cancel Booking
-              </button>
-            </div>
-          </div>
-        ))}
+      <div className="mx-auto sm:px-6 lg:px-8 mt-10">
+        <table className="min-w-full divide-y divide-gray-200">
+          <thead className="bg-gray-50">
+            <tr>
+              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                Image
+              </th>
+              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                Name
+              </th>
+              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                Price Per Hour
+              </th>
+              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                Booking Info
+              </th>
+              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                Actions
+              </th>
+            </tr>
+          </thead>
+          <tbody className="bg-white divide-y divide-gray-200">
+            {bookings?.data?.map((item: any, index: number) => (
+              <tr key={index}>
+                <td className="px-6 py-4 whitespace-nowrap">
+                  <img
+                    src={item.facility.image}
+                    alt="Facility"
+                    className="h-20 w-20 rounded-full"
+                  />
+                </td>
+                <td className="px-6 py-4 whitespace-nowrap">
+                  <div className="text-sm font-medium text-gray-900">
+                    {item.facility.name}
+                  </div>
+                </td>
+                <td className="px-6 py-4 whitespace-nowrap">
+                  <div className="text-sm text-gray-900">
+                    $ {item.facility.pricePerHour} Per Hour
+                  </div>
+                </td>
+                <td className="px-6 py-4 whitespace-nowrap">
+                  <span className="text-sm font-medium text-gray-900">
+                    Date: {formatDate(item.date)}, From:{" "}
+                    {convertTo12HourFormat(item.startTime)} To:{" "}
+                    {convertTo12HourFormat(item.endTime)}
+                  </span>
+                </td>
+                <td className="px-6 py-4 whitespace-nowrap">
+                  <button
+                    onClick={() => handleOpen(item)}
+                    className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 mr-2"
+                  >
+                    Details
+                  </button>
+                  <button
+                    onClick={() => handleCancelBooking(item?._id)}
+                    className="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600"
+                  >
+                    Cancel
+                  </button>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
       </div>
 
-      <Dialog
-        open={open}
-        size="sm"
-        handler={handleOpen}
-        placeholder={undefined}
-        onPointerEnterCapture={undefined}
-        onPointerLeaveCapture={undefined}
-      >
-        <div>
-          <div className="rounded-xl p-3 shadow-2xl hover:shadow-xl">
-            <div className="relative flex items-end overflow-hidden rounded-xl">
-              <img
-                src={details?.facility?.image}
-                alt="Hotel Photo"
-                className="h-[200px] w-full"
-              />
-            </div>
-
-            <div className="mt-1 p-2">
-              <h2 className="text-black text-center text-xl font-bold">
-                {details?.facility?.name}
-              </h2>
-
-              <span className="text-lg flex justify-center items-center mt-4 font-bold text-black text-center">
-                $ {details?.facility?.pricePerHour} per hour
-              </span>
-            </div>
-
-            <div className="flex flex-col gap-3 mt-3 justify-center items-center">
-              <h1 className="text-lg text-black font-semibold">
-                Date: {details?.date}
-              </h1>
-
-              <h1 className="text-lg text-black font-semibold">
-                Start Time: {details?.startTime}
-              </h1>
-
-              <h1 className="text-lg text-black font-semibold">
-                End Time: {details?.endTime}
-              </h1>
+      {details && (
+        <Dialog open={open} size="sm" handler={() => setOpen(false)}>
+          <div>
+            <img
+              src={details?.facility?.image}
+              alt="Facility"
+              className="h-48 w-full rounded-t"
+            />
+            <div className="p-4">
+              <h2 className="text-lg font-bold">{details?.facility?.name}</h2>
+              <p>Date: {details?.date}</p>
+              <p>
+                Time: {details?.startTime} - {details?.endTime}
+              </p>
+              <p>Price: ${details?.facility?.pricePerHour} Per Hour</p>
             </div>
           </div>
-        </div>
-      </Dialog>
+        </Dialog>
+      )}
     </div>
   );
 };

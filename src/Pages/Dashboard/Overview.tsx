@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import React from 'react';
 import { selectCurrentUser } from "../../Redux/Features/Auth/authSlice";
-import { useGetAllBookingsQuery } from "../../Redux/Features/Bookings/bookings.api";
+import { useGetAllBookingsQuery, useGetBookingsByUserQuery } from "../../Redux/Features/Bookings/bookings.api";
 import { useGetAllFacilitiesQuery } from "../../Redux/Features/Facilities/facilities.api";
 import { useAppSelector } from "../../Redux/hooks";
 import NoDataFound from "../../Utils/NoDataFound";
@@ -21,7 +21,7 @@ const Overview: React.FC = () => {
   const user = useAppSelector(selectCurrentUser);
   const { data: bookings, isLoading: bookingsLoading } = useGetAllBookingsQuery(undefined);
   const { data: facilities, isLoading: facilitiesLoading } = useGetAllFacilitiesQuery(undefined);
-
+  const { data: mybookings } = useGetBookingsByUserQuery(undefined);
   if (bookingsLoading || facilitiesLoading) {
     return <LoaderForDashboard />;
   }
@@ -40,18 +40,11 @@ const Overview: React.FC = () => {
     <div >
        {
        user?.role === "user"  ?
-      <div className='h-screen flex justify-center items-center'  style={{
-    backgroundImage: "url(https://static.vecteezy.com/system/resources/previews/025/871/650/non_2x/background-with-sport-equipment-vector.jpg)",
-   backgroundRepeat: "no-repeat",
-  backgroundSize: "cover",
-    backgroundPosition: "center",
-    color: "white",
-    minHeight: "100vh",
-    display: "flex",
-  }}>
-<h1 className="text-center text-black text-5xl font-bold mt-20">
-        Welcome <span className="text-blue-500 font-bold">{user?.name}</span> to your Dashboard
-      </h1>
+      <div className='h-screen flex justify-center items-center'  >
+<div className="bg-blue-500 text-white py-5 text-center lg:w-1/4 md:w-1/4 w-10/12 mb-3 rounded">
+          <h1 className="text-5xl font-bold mb-2">{mybookings.data.length}</h1>
+          <h4 className="text-xl">Total Bookings</h4>
+        </div>
       </div>
       :
       <div>
