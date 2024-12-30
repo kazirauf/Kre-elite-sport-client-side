@@ -35,16 +35,74 @@ const Overview: React.FC = () => {
     { category: 'Total Facilities', value: facilities?.data?.length || 0 },
     { category: 'Total Bookings', value: bookings.data.length },
   ];
+  const chartData2 = [
+    { category: 'Total Bookings', value: mybookings?.data?.length || 0 },
+ 
+  ];
 
   return (
     <div >
        {
        user?.role === "user"  ?
-      <div className='h-screen flex justify-center items-center'  >
+      <div className='items-center'  >
+<div className='flex justify-center'>
 <div className="bg-blue-500 text-white py-5 text-center lg:w-1/4 md:w-1/4 w-10/12 mb-3 rounded">
-          <h1 className="text-5xl font-bold mb-2">{mybookings.data.length}</h1>
+          <h1 className="text-5xl font-bold mb-2">{mybookings?.data?.length}</h1>
           <h4 className="text-xl">Total Bookings</h4>
         </div>
+</div>
+        <div className='lg:flex md:flex justify-center mt-20'>
+      
+      <div className="flex justify-center my-10">
+         <BarChart
+           xAxis={[{ id: 'categories', data: chartData2.map(item => item.category), scaleType: 'band' }]}
+           series={[{ data: chartData.map(item => item.value) }]}
+           width={500}
+           height={300}
+         />
+       </div>
+ 
+       <div className=" mx-auto p-4 lg:mx-32">
+         <div className="overflow-x-auto shadow-md sm:rounded-lg">
+           <table className="w-full text-sm text-left text-gray-500">
+             <thead className="text-xs text-gray-700 uppercase bg-gray-50">
+               <tr>
+                 <th scope="col" className="px-6 py-3">Image</th>
+                 <th scope="col" className="px-6 py-3">Name</th>
+                 <th scope="col" className="px-6 py-3">Price Per Hour</th>
+                 <th scope="col" className="px-6 py-3">Location</th>
+               </tr>
+             </thead>
+             <tbody>
+               {mybookings?.data?.slice(0, 4).map((item: any, index: number) => (
+                 <tr key={index} className="bg-white border-b hover:bg-gray-50">
+                   <td className="px-6 py-4">
+                     <img
+                       src={item.facility.image }
+                       alt="facility"
+                       className="w-10 h-10 rounded-full"
+                     />
+                   </td>
+                   <td className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                     {item.facility.name }
+                   </td>
+                   <td className="px-6 py-4">
+                     {item.facility.pricePerHour }
+                   </td>
+                   <td className="px-6 py-4">
+                   {item.facility.location }
+                   </td>
+                 </tr>
+               )) || (
+                 <tr>
+                   <td colSpan={4} className="text-center py-4">No Facilities Found</td>
+                 </tr>
+               )}
+             </tbody>
+           </table>
+         </div>
+       </div>
+      </div>
       </div>
       :
       <div>

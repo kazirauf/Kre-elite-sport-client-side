@@ -6,7 +6,7 @@ import {
 } from "../../Redux/Features/Bookings/bookings.api";
 import NoDataFound from "../../Utils/NoDataFound";
 import LoaderForDashboard from "./LoaderForDashboard";
-import { Dialog } from "@material-tailwind/react";
+
 import { formatDate } from "../../Utils/formatDate";
 import { convertTo12HourFormat } from "../../Utils/timeConversion";
 import toast from "react-hot-toast";
@@ -134,7 +134,7 @@ const MyBookings = () => {
       </div>
 
       {details && (
-        <Dialog open={open} size="sm" handler={() => setOpen(false)}>
+        <dialog open={open}  onClick={() => setOpen(false)}>
           <div>
             <img
               src={details?.facility?.image}
@@ -150,7 +150,7 @@ const MyBookings = () => {
               <p>Price: ${details?.facility?.pricePerHour} Per Hour</p>
             </div>
           </div>
-        </Dialog>
+        </dialog>
       )}
     </div>
   );

@@ -10,9 +10,8 @@ import toast from "react-hot-toast";
 import { FormEvent, useState } from "react";
 import { Button, Dialog, Input, Textarea } from "@material-tailwind/react";
 import { Facility } from "../../Types/Types";
-import { IoMdAddCircle } from "react-icons/io";
+
 import Swal from "sweetalert2";
-import { Link } from "react-router-dom";
 
 const FacilityManagement = () => {
   const { data: facilities, isLoading } = useGetAllFacilitiesQuery(undefined);

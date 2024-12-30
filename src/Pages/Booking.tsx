@@ -70,11 +70,13 @@ const Booking = () => {
   }
 
   return (
-    <div className="bg-[#F5EDED] py-20">
+    <div className=" py-20">
        <h1 className="text-center text-4xl font-bold my-10">Select Your <span className="text-blue-500 text-4xl font-bold">Schedule</span> And <span className="text-blue-500 text-4xl font-bold">Start Time Slot  </span> To <span className="text-blue-500 text-4xl font-bold">End Time Slot</span></h1>
       <div className="bg-white rounded-lg overflow-hidden shadow-2xl w-[90%] md:w-[60%] mx-auto flex">
      
-        <div className="p-8">
+        <div className="p-8 lg:flex md:flex justify-around">
+         
+          <div className="mt-10 ">
           <h2 className="text-xl md:text-3xl font-bold text-gray-800 mb-4">
             {facility?.data?.name}
           </h2>
@@ -84,11 +86,10 @@ const Booking = () => {
        
           </p>
 
-          <div className="mt-10">
+            <div className="">
             <p className="mb-2 font-bold text-lg text-gray-700">
               Select Your Schedule 📅
             </p>
-            <div className="">
               <input
                 type="date"
                 className="w-[200px] border-black border-2 outline-none p-3  font-bold"
@@ -108,10 +109,12 @@ const Booking = () => {
                 )}
               </button>
             </div>
-
-            <form onSubmit={handleSubmit}>
+         
+           
+          </div>
+          <form onSubmit={handleSubmit}>
               {availableSlots && (
-                <div className="mt-5">
+                <div className="mt-10">
                   <p className="mb-2 font-bold text-lg text-gray-700">
                     Available Slots:
                   </p>
@@ -120,7 +123,7 @@ const Booking = () => {
                     {availableSlots?.map((item: any, index: number) => (
                       <div
                         key={index}
-                        className="bg-black py-2 text-center text-base font-semibold text-white rounded-lg"
+                        className="bg-black py-2  text-center text-base font-semibold text-white rounded-lg"
                       >
                         {convertTo12HourFormat(item.startTime)} -{" "}
                         {convertTo12HourFormat(item.endTime)}
@@ -172,13 +175,12 @@ const Booking = () => {
                 </div>
               )}
             </form>
-          </div>
         </div>
-        <div>
+        <div >
         <img src="https://img.freepik.com/free-vector/appointment-booking-mobile-concept_23-2148570788.jpg?w=826&t=st=1725174543~exp=1725175143~hmac=633e6f3ec7d6e33c01c601e4df386ba704d2ae05136c8ed72e2c4a385935d519" alt="" />
         </div>
       </div>
-    X
+
     </div>
   );
 };
