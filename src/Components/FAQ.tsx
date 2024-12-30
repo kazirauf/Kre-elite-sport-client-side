@@ -2,7 +2,7 @@ import '../index.css'
 
 const FAQ = () => {
     return (
-    <div className='lg:flex md:flex hidden'>
+    <div className='lg:flex md:flex justify-center hidden'>
        <section className='bg-white'>
          <h1 className="text-center text-5xl font-bold mt-20">F<span className="text-blue-500">A</span>Q</h1>
            <div className='lg:flex md:flex hidden justify-center items-center mx-auto my-20'>

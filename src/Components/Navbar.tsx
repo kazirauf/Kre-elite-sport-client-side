@@ -17,10 +17,10 @@ const Navbar = () => {
   const user = useAppSelector(selectCurrentUser);
 
   return (
-    <div className="flex justify-between items-center bg-black py-3 px-10 md:px-10 lg:px-20 lg:text-white md:text-white shadow-xl sticky top-0 z-20 ">
-      <h1 className="text-xl text-white font-bold py-3 flex items-center">
-      <img src={logo} className=" w-12 me-3" alt="FlowBite Logo" />
-       <p className="mt-2"> KRE Elite Sport</p></h1>
+    <div className="flex justify-between items-center bg-black py-5 px-10 md:px-10 lg:px-20 lg:text-white md:text-white shadow-xl sticky top-0 z-20 ">
+    
+      <img src={logo} className="w-52 me-3" alt="FlowBite Logo" />
+ 
 
       <div className="hidden md:hidden lg:flex gap-7 justify-center items-center text-base font-bold">
         <NavLink to={"/"}>Home</NavLink>

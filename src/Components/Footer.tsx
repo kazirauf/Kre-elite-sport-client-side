@@ -4,13 +4,13 @@ const Footer = () => {
     <footer className="bg-black dark:bg-gray-900 text-white">
             <div className="mx-auto w-full max-w-screen-2xl p-4 py-6 lg:py-8">
                 <div className="md:flex md:justify-between">
-                    <div className="mb-6 md:mb-0">
-                        <a href="https://flowbite.com/" className="flex items-center">
-                            <img src={logo} className=" w-60 h-60 me-3" alt="FlowBite Logo" />
+                    <div className="mb-6 md:mb-0 flex items-center">
+                        <a href="https://flowbite.com/" className="flex items-center mt-5">
+                            <img src={logo} className=" w-60  me-3" alt="FlowBite Logo" />
                           
                         </a>
                     </div>
-                    <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3 mt-20">
+                    <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3 mt-10">
                         <div>
                             <h2 className="mb-6 text-sm font-semibold text-white uppercase dark:text-white">Resources</h2>
                             <ul className="text-gray-500 dark:text-gray-400 font-medium">

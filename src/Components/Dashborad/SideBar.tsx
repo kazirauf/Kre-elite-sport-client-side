@@ -126,13 +126,7 @@ const Sidebar = () => {
               )}
 
               {/* Common route */}
-              <button className="hover:bg-white hover:text-black text-white">
-                <Link to={"/"} className="flex p-3 items-center gap-2 font-bold">
-               
-                <img className="w-7" src={icon5} alt="" />
-                  Back to main site
-                </Link>
-              </button>
+             
 
               <button
                 onClick={handleLogOut}
